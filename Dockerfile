@@ -7,6 +7,5 @@ RUN npm install --no-optional && npm cache clean --force
 COPY server-env.js ./
 
 USER nobody
-EXPOSE 9210
 
-#ENTRYPOINT ["/bin/netatmo-exporter"]
+ENTRYPOINT ["node", "server-env.js"]
